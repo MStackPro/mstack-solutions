@@ -11,6 +11,7 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { IconButton } from "@mui/material";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
+import { Button } from "./ui/button";
 
 
 export default function SwipeableTemporaryDrawer() {
@@ -55,6 +56,11 @@ export default function SwipeableTemporaryDrawer() {
             </ListItemButton>
           </ListItem>
         ))}
+        <Button
+            href="/contact"
+          >
+            Contact
+          </Button>
       </List>
     </Box>
   );

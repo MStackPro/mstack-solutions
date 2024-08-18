@@ -10,9 +10,6 @@
 
 @layer base {
   body {
-    @apply bg-colorDark text-colorGray ;
+    @apply bg-colorDark text-colorGray leading-loose;
   }
-}
-.home {
-    color: #a5a5a5;
 }

@@ -26,6 +26,9 @@ module.exports = {
         lg: "960px",
         xl: "1200px",
       },
+      backgroundImage: {
+        "custom-image": 'url("/assets/landing.png")',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

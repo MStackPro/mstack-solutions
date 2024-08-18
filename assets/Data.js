@@ -10,23 +10,30 @@ export const navlinks = [
 ];
 
 export const webProjects = [
-  { image: "/assets/kekepay.png", name: "keke pay", link: "#" },
-  { image: "/assets/NFT.png", name: "nft", link: "#" },
-  { image: "/assets/CreativeAgency.png", name: "creative agency", link: "#" },
-  { image: "/assets/sorix.png", name: "sorix energy", link: "#" },
-  { image: "/assets/manage.jpg", name: "manage", link: "#" },
-  { image: "/assets/Zenith.png", name: "zenith agro", link: "#" },
+  { image: require("/assets/landing-page.png"), name: "mstack solutions", link: "#" },
+  { image: require("/assets/NFT.png"), name: "nft", link: "#" },
+  {
+    image: require("/assets/CreativeAgency.png"),
+    name: "creative agency",
+    link: "#",
+  },
+  { image: require("/assets/sorix.png"), name: "sorix energy", link: "#" },
+  { image: require("/assets/manage.jpg"), name: "manage", link: "#" },
+  { image: require("/assets/Zenith.png"), name: "zenith agro", link: "#" },
 ];
 
 export const designs = [
-  { image: "/assets/kekepay.png", name: "kve africa" },
-  { image: "/assets/kekepay.png", name: "kve africa" },
-  { image: "/assets/kekepay.png", name: "pap flour" },
-  { image: "/assets/kekepay.png", name: "mstack solutions" },
-  { image: "/assets/kekepay.png", name: "sorix energy" },
-  { image: "/assets/kekepay.png", name: "chop good pastery" },
-  { image: "/assets/k8.PNG", name: "kay's thrift" },
-  { image: "/assets/logo1.PNG", name: "jj interiors" },
+  { image: require("/assets/sharpzy.png"), name: "sharpie's footwear" },
+  { image: require("/assets/kve.png"), name: "kve africa" },
+  { image: require("/assets/pap.png"), name: "pap flour" },
+  { image: require("/assets/mstack-mockup.png"), name: "mstack solutions" },
+  { image: require("/assets/sorix-stationeries.png"), name: "sorix energy" },
+  {
+    image: require("/assets/chop-good-pastery.png"),
+    name: "chop good pastery",
+  },
+  { image: require("/assets/k8.PNG"), name: "kay's thrift" },
+  { image: require("/assets/jj-interios.JPG"), name: "jj interiors" },
 ];
 
 export const aboutDesigns = [
@@ -36,7 +43,9 @@ export const aboutDesigns = [
     experience: "since 2022",
     projects: "12+ brands",
     team: "4 members",
-    logos: "8+ logos",
+    logo: "8+ logos",
+    cta1: "see all projects",
+    cta2: "i need a design",
   },
 ];
 
@@ -48,6 +57,29 @@ export const aboutWebDev = [
     projects: "4+ brands",
     team: "4 members",
     web: "8+ web projects",
+    cta1: "see all projects",
+    cta2: "i need a website",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    name: "design",
+    desc: "We take up all of your brand design needs from scratch to finish, starting from Your logo up to your Website Design.",
+    link: "#",
+  },
+  {
+    id: 2,
+    name: "development",
+    desc: "We also focus on understanding your brand and the customer base it is targeting, then develop uniform concepts that attract your customers the most.",
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "modification",
+    desc: "For brands with already existing design concepts, but want to step it up, We provide core research for your brand to fix all issues that make it unstable.",
+    link: "#",
   },
 ];
 

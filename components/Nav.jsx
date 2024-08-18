@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, List } from "@mui/material";
+import { List } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -9,13 +9,15 @@ import { usePathname } from "next/navigation";
 import MobileNav from '/components/MobileNav'
 import { navlinks } from "@/assets/Data";
 import { IoIosArrowDown } from "react-icons/io";
+import { Button } from "./ui/button";
+
+
 
 export default function Navbar() {
 
-
   const pathname = usePathname();
   return (
-    <nav className="h-20 bg-black flex items-center fixed w-screen">
+    <nav className="h-20 mt-[1.65rem] bg-black flex items-center fixed w-screen z-50">
       <div className="container flex items-center justify-between">
         <Link href="/">
           <Image src={Logo} alt="logo" width={170} priority />
@@ -38,11 +40,6 @@ export default function Navbar() {
             );
           })}
           <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#d80000",
-              ":hover": { backgroundColor: "#7f0c0c" },
-            }}
             href="/contact"
           >
             Contact
