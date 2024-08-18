@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const pathname = usePathname();
   return (
-    <nav className="h-20 mt-[1.65rem] bg-black flex items-center fixed w-screen z-50">
+    <nav className="h-20 mt-[1.65rem] bg-colorDark shadow-md flex items-center fixed w-screen z-50">
       <div className="container flex items-center justify-between">
         <Link href="/">
           <Image src={Logo} alt="logo" width={170} priority />

@@ -5,6 +5,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ScrollUp from "@/components/ScrollUp";
+import Progress from "@/components/Progress";
 
 
 const montserrat = Montserrat({
@@ -23,8 +25,9 @@ export default function RootLayout({ children }) {
       <body className={montserrat.variable}>
         <Header/>
         <Navbar/>
-        {children}
+        <Progress>{children}</Progress>
         <Footer/>
+        <ScrollUp/>
         </body>
     </html>
   );

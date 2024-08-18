@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function Header() {
   return (
-    <header className="bg-colorGray fixed w-screen z-50 top-0">
+    <header className="bg-colorGray fixed w-screen top-0">
       <div className="container flex items-center justify-between">
         <p className="flex items-center gap-2 text-[13px] font-semibold text-primary">
           <FaPhoneAlt /> +234-810 601 7834
