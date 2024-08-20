@@ -1,6 +1,8 @@
 import { IoIosEye } from "react-icons/io";
 import { IoDiamondOutline } from "react-icons/io5";
 import { GoDotFill } from "react-icons/go";
+import { TbCurrencyNaira } from "react-icons/tb";
+
 
 export const navlinks = [
   { name: "Home", path: "/" },
@@ -23,11 +25,11 @@ export const webProjects = [
 ];
 
 export const designs = [
-  { image: require("/assets/sharpzy.png"), name: "sharpie's footwear" },
+  { image: require("/assets/sharpy.png"), name: "sharpie's footwear" },
   { image: require("/assets/kve.png"), name: "kve africa" },
   { image: require("/assets/pap.png"), name: "pap flour" },
   { image: require("/assets/mstack-mockup.png"), name: "mstack solutions" },
-  { image: require("/assets/sorix-stationeries.png"), name: "sorix energy" },
+  { image: require("/assets/sorixenergy.png"), name: "sorix energy" },
   {
     image: require("/assets/chop-good-pastery.png"),
     name: "chop good pastery",
@@ -171,7 +173,7 @@ export const aboutUs = [
   },
 ];
 
-export const prices = [
+export const plans = [
   {
     title: "design",
     desc: "We design a user-friendly interface that is visually appealing and engages your target audience. Your website will be created to meet your brand's needs and goals while ensuring a seamless user experience.",
@@ -188,7 +190,7 @@ export const prices = [
   {
     title: "web development",
     desc: "We also focus on understanding your brand and the customer base it is targeting, then develop uniform concepts that attract your customers the most.",
-    price: "450,000",
+    price: "",
     features: [
       { feature: "custom admin panel", price: "" },
       { feature: "build multiple screens", price: "" },

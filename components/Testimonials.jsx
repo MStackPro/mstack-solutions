@@ -1,7 +1,7 @@
 "use client"
 
 import { testimonies } from '@/assets/Data'
-import { Avatar, Card } from '@mui/material'
+import { Avatar } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import "swiper/css";
@@ -15,7 +15,7 @@ export default function Testimonials() {
             <Marquee pauseOnClick={true} direction='right' className="flex gap-20"> 
                 {testimonies.map((item, id) => {
                     return (
-                        <Card key={id} className='relative mr-20 flex flex-col xl:gap-4 items-start xl:px-6 px-4 py-2 xl:w-[400px] w-[330px] overflow-visible rounded-md border border-primary transition duration-500 ease-in-out bg-colorGray cursor-pointer'>
+                        <div key={id} className=' mr-20 flex flex-col xl:gap-4 items-start xl:px-6 px-4 py-2 xl:w-[400px] w-[330px] rounded-md border border-primary transition duration-500 ease-in-out bg-colorGray cursor-pointer'>
                             <Avatar className='absolute top-0 transform -translate-y-1/2'>
                                 <Image src={item.avatar} alt='avatar'/>
                             </Avatar>
@@ -24,7 +24,7 @@ export default function Testimonials() {
                                 <span className='font-semibold capitalize caption-top'>{item.name}</span>
                                 <small className='uppercase'>{item.job}</small>
                             </div>
-                        </Card>
+                        </div>
                     )
                 })}
             </Marquee>

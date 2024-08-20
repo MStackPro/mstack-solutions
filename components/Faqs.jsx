@@ -28,9 +28,9 @@ export default function Faqs() {
                                             {item.question}
                                         </Box>
                                         {isExpanded ? (
-                                            <FiMinus className='text-textGray' />
+                                            <FiMinus className='text-textGray text-2xl' />
                                         ) : (
-                                            <FiPlus className='text-textGray' />
+                                            <FiPlus className='text-textGray text-2xl' />
                                         )}
                                     </AccordionButton>
                                 </h2>
