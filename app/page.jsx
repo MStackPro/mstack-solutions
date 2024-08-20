@@ -14,6 +14,9 @@ import DesignProjectsTemplate from "@/components/templates/DesignProjectsTemplat
 import { Button } from "@/components/ui/button";
 import { ArrowOutward } from "@mui/icons-material";
 import Technologies from "@/components/Technologies";
+import Link from "next/link";
+import Testimonials from "@/components/Testimonials";
+import Faqs from "@/components/Faqs";
 
 export default function page() {
   return (
@@ -122,9 +125,17 @@ export default function page() {
           <div className="flex xl:flex-row flex-col justify-between gap-8">
             {services.map((item, id) => {
               return (
-                <article key={id} className="flex flex-col flex-1 gap-8 border border-primary p-4">
-                  <h2 className="text-2xl font-semibold capitalize">{item.name}</h2>
+                <article key={id} className="flex flex-col flex-1 gap-4 border border-primary p-4 rounded-md">
+                  <h2 className="text-2xl font-semibold capitalize text-primary">{item.name}</h2>
                   <p>{item.desc}</p>
+                  <Link href={item.link}>
+                  <Button
+                      variant="link"
+                      href={item.link}
+                    >
+                      visit project<ArrowOutward className='ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2'/>
+                    </Button>
+                  </Link>
                 </article>
               );
             })}
@@ -135,6 +146,16 @@ export default function page() {
       {/* TEchnologies used */}
       <section>
         <Technologies/>
+      </section>
+
+      {/* Testimonials */}
+      <section>
+        <Testimonials/>
+      </section>
+
+      {/* FAQs */}
+      <section>
+        <Faqs/>
       </section>
     </main>
   );

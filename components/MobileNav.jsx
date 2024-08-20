@@ -51,7 +51,7 @@ export default function SwipeableTemporaryDrawer() {
                 className={`${
                   item.path == pathname &&
                   "text-primary border-b border-primary transition-all ease-in-out"
-                } capitalize transition-all ease-in-out hover:text-primary`}
+                } capitalize font-semibold transition-all ease-in-out hover:text-primary`}
               />
             </ListItemButton>
           </ListItem>

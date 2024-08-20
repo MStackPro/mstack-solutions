@@ -6,7 +6,8 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ScrollUp from "@/components/ScrollUp";
-import Progress from "@/components/Progress";
+import ScrollProgress from "@/components/ScrollProgress";
+
 
 
 const montserrat = Montserrat({
@@ -25,7 +26,8 @@ export default function RootLayout({ children }) {
       <body className={montserrat.variable}>
         <Header/>
         <Navbar/>
-        <Progress>{children}</Progress>
+        <ScrollProgress/>
+        {children}
         <Footer/>
         <ScrollUp/>
         </body>

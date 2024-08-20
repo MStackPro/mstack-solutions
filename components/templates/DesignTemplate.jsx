@@ -24,7 +24,7 @@ export default function BrandTemplate({
           <Button>{cta1}</Button>
           <Button variant="third">
             {cta2}{" "}
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
+            <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
           </Button>
         </div>
       </article>

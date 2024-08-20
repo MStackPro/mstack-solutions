@@ -3,7 +3,7 @@
 import { List } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "/assets/mstack.png";
 import { usePathname } from "next/navigation";
 import MobileNav from '/components/MobileNav'
@@ -15,9 +15,24 @@ import { Button } from "./ui/button";
 
 export default function Navbar() {
 
+  const [navbarBg, setnavbarBg] = useState(false)
+
+  const navbarBgChange = () => {
+      if (window.scrollY >= 80) {
+        setnavbarBg(true)
+      } else {
+        setnavbarBg(false)
+      }
+  }
+
+  useEffect (() => {
+    navbarBgChange()
+    window.addEventListener('scroll', navbarBgChange)
+  })
+
   const pathname = usePathname();
   return (
-    <nav className="h-20 mt-[1.65rem] bg-colorDark shadow-md flex items-center fixed w-screen z-50">
+    <nav className={`${navbarBg ? 'bg-colorDark shadow-md transition duration-500ms ease-in-out' : 'bg-transparent'} h-20 mt-[1.65rem] flex items-center fixed w-screen z-40`}>
       <div className="container flex items-center justify-between">
         <Link href="/">
           <Image src={Logo} alt="logo" width={170} priority />

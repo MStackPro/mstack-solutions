@@ -24,7 +24,7 @@ export default function WebProjectsTemplates({image, name, link}) {
                       variant="link"
                       href={link}
                     >
-                      visit project<ArrowOutward className='ml-2 text-primary transform transition duration-500 hover:-translate-y-2'/>
+                      visit project<ArrowOutward className='ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2'/>
                     </Button>
                   </div>
                 </article>

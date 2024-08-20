@@ -93,7 +93,7 @@ export const testimonies = [
     avatar: require("/assets/tm1.jpg"),
   },
   {
-    id: 1,
+    id: 2,
     name: "Osike",
     quote:
       "Amazingly talented Brand design. I really admire the work! I recomended them to my friends too. I Will 100 percent recommended them for website and brand identity design projects.",
@@ -101,7 +101,7 @@ export const testimonies = [
     avatar: require("/assets/tm1.jpg"),
   },
   {
-    id: 1,
+    id: 3,
     name: "Kasha",
     quote:
       "Amazingly talented Brand design. I really admire the work! I recomended them to my friends too. I Will 100 percent recommended them for website and brand identity design projects.",
