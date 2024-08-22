@@ -11,15 +11,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import HeroImage from '/assets/contact.jpg'
+import HeroImage from "/assets/contact.jpg";
 import React from "react";
 
 export default function Contact() {
   return (
     <main>
       <SectionHero title={"contact us"} image={HeroImage}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-        perspiciatis!
+        Have a question or want to hire us? We are here to help. Feel free to reach
+        out via social media handles or directly via email. Thank you!
       </SectionHero>
 
       <section className="container flex justify-center mt-20 gap-6 items-center">
@@ -27,7 +27,9 @@ export default function Contact() {
           action=" "
           className="flex flex-col items-center gap-4 border border-colorGray p-6 rounded-md"
         >
-          <h3 className="text-2xl font-semibold text-colorGray capitalize">get in touch</h3>
+          <h3 className="text-2xl font-semibold text-colorGray capitalize">
+            get in touch
+          </h3>
           <div className="grid grid-cols-1 gap-4">
             <Input type="text" placeholder="Full Name" />
             <Input type="email" placeholder="Email Address" />
@@ -58,7 +60,7 @@ export default function Contact() {
               placeholder="Type your message here."
             />
           </div>
-          <Button className="w-full">send message</Button>
+          <Button type="submit" className="w-full">send message</Button>
         </form>
       </section>
     </main>

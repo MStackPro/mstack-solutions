@@ -7,12 +7,13 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { navlinks } from "@/assets/Data";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { IconButton } from "@mui/material";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { WestOutlined } from "@mui/icons-material";
+
 
 export default function SwipeableTemporaryDrawer() {
   const pathname = usePathname();
@@ -39,7 +40,7 @@ export default function SwipeableTemporaryDrawer() {
       className="flex justify-center items-center flex-col gap-10"
     >
       <IconButton onClick={toggleDrawer(false)} className="mr-40 mt-12">
-        <CloseOutlinedIcon fontSize="large" />
+        <WestOutlined fontSize="large" />
       </IconButton>
 
       <List>
@@ -51,7 +52,7 @@ export default function SwipeableTemporaryDrawer() {
                 className={`${
                   item.path == pathname &&
                   "text-primary transition-all duration-500 ease-in-out"
-                } capitalize transition-all ease-in-out hover:text-primary `}
+                } capitalize transition-all ease-in-out hover:text-primary`}
               />
             </ListItemButton>
           </ListItem>

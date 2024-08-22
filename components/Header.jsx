@@ -10,7 +10,7 @@ export default function Header() {
         <p className="hidden xl:flex items-center gap-2 text-[13px] font-semibold text-primary">
           <FaPhoneAlt /> +234-810 601 7834
         </p>
-        <p className="xl:hidden flex items-center gap-2 text-primary  xl:text-[13px] font-semibold">
+        <p className="xl:hidden flex items-center gap-2 text-primary text-[13px] font-semibold">
             <MdEmail /> info@mstacksolutions.com
           </p>
 

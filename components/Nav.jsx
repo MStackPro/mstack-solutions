@@ -50,7 +50,7 @@ export default function Navbar() {
                 className={`${
                   item.path == pathname &&
                   "text-primary border-b border-primary transition-all ease-in-out"
-                } capitalize transition-all ease-in-out hover:text-primary`}
+                } capitalize transition-all ease-in-out font-semibold hover:text-primary`}
               >
                 {item.name}
                 {/* {item.name === "Services" && (<IoIosArrowDown className="ml-1"/>)} */}

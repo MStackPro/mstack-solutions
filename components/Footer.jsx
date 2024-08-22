@@ -11,10 +11,10 @@ import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 
 const socials = [
-  { id: 1, icon: <FaInstagram />, link: "#" },
-  { id: 2, icon: <FaLinkedin />, link: "#" },
-  { id: 3, icon: <FaXTwitter />, link: "#" },
-  { id: 4, icon: <FaWhatsapp />, link: "#" },
+  { id: 1, icon: <FaInstagram />, link: "https://www.instagram.com/mstacksolutions?igsh=MWx3ZHpzamgwN25meg%3D%3D&utm_source=qr" },
+  { id: 2, icon: <FaLinkedin />, link: "linkedin.com/company/mstack-solutions" },
+  { id: 3, icon: <FaXTwitter />, link: "https://www.twitter.com/mstacksolutions" },
+  { id: 4, icon: <FaWhatsapp />, link: "https://wa.link/2demo6" },
 ];
 
 const supportLinks = [
@@ -35,7 +35,7 @@ export default function Footer() {
                     <Link
                       key={id}
                       href={item.link}
-                      className="text-colorDark xl:text-4xl text-2xl hover:text-primary transition-all duration-500 ease-in-out"
+                      className="text-colorDark xl:text-3xl text-2xl hover:text-primary transition-all duration-500 ease-in-out"
                     >
                       {item.icon}
                     </Link>

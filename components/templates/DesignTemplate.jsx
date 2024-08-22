@@ -1,6 +1,7 @@
 import { ArrowOutward } from "@mui/icons-material";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function BrandTemplate({
   heading,
@@ -21,14 +22,21 @@ export default function BrandTemplate({
         <p className="xl:w-3/4 text-textGray">{desc}</p>
 
         <div className="xl:flex md:flex md:gap-4 items-center gap-16 hidden">
-          <Button>{cta1}</Button>
-          <Button variant="third">
-            {cta2}{" "}
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
-          </Button>
+          <Link href="https://www.behance.net/walshakmanasseh">
+            <Button>
+              {cta1}{" "}
+              <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />{" "}
+            </Button>
+          </Link>
+          <Link href="/contact">
+            {" "}
+            <Button variant="third">
+              {cta2}{" "}
+              <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
+            </Button>
+          </Link>
         </div>
       </article>
-
       <article className="flex xl:justify-end md:justify-end gap-20 xl:flex-1 md:flex-1">
         <div className="flex flex-col xl:items-end md:items-end md:text-end xl:text-end gap-12">
           <div>
@@ -56,7 +64,14 @@ export default function BrandTemplate({
           </div>
         </div>
       </article>
-      <Button className="xl:hidden md:hidden">{cta1}</Button>
+      <Link
+        href="https://www.behance.net/walshakmanasseh"
+      >
+        <Button className="xl:hidden w-full md:hidden">
+          {cta1}{" "}
+          <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
+        </Button>
+      </Link>
     </main>
   );
 }

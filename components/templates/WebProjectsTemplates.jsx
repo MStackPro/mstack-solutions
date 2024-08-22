@@ -22,7 +22,7 @@ export default function WebProjectsTemplates({image, name, link}) {
                     </p>
                     <Button
                       variant="link"
-                      href={link}
+                      href=''
                     >
                       visit project<ArrowOutward className='ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2'/>
                     </Button>

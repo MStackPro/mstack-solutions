@@ -1,6 +1,7 @@
 import { ArrowOutward } from "@mui/icons-material";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function BrandTemplate({
   heading,
@@ -21,11 +22,18 @@ export default function BrandTemplate({
         <p className="xl:w-3/4 text-textGray">{desc}</p>
 
         <div className="xl:flex md:flex md:gap-4 items-center gap-16 hidden">
-          <Button>{cta1}</Button>
-          <Button variant="secondary">
-            {cta2}{" "}
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
-          </Button>
+          <Link href="https://www.behance.net/walshakmanasseh">
+            <Button>
+              {cta1}{" "}
+              <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button variant="secondary">
+              {cta2}{" "}
+              <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
+            </Button>
+          </Link>
         </div>
       </article>
 
@@ -33,7 +41,9 @@ export default function BrandTemplate({
         <div className="flex flex-col xl:items-end md:items-end md:text-end xl:text-end gap-12">
           <div>
             <h4 className="uppercase text-textGray">experience</h4>
-            <p className="font-semibold text-colorGray capitalize">{experience}</p>
+            <p className="font-semibold text-colorGray capitalize">
+              {experience}
+            </p>
           </div>
           <div>
             <h4 className="uppercase text-textGray">team</h4>
@@ -48,11 +58,21 @@ export default function BrandTemplate({
           </div>
           <div>
             <h4 className="uppercase text-textGray">projects</h4>
-            <p className="font-semibold text-colorGray capitalize">{projects}</p>
+            <p className="font-semibold text-colorGray capitalize">
+              {projects}
+            </p>
           </div>
         </div>
       </article>
-      <Button className="xl:hidden md:hidden">{cta1}</Button>
+      <Link
+        href="https://www.behance.net/walshakmanasseh"
+         className="xl:hidden w-full md:hidden"
+      >
+        <Button>
+          {cta1}{" "}
+          <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
+        </Button>
+      </Link>
     </main>
   );
 }

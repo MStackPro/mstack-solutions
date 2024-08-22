@@ -1,9 +1,4 @@
-import {
-  aboutDesigns,
-  aboutWebDev,
-  designs,
-  webProjects,
-} from "@/assets/Data";
+import { aboutDesigns, aboutWebDev, designs, webProjects } from "@/assets/Data";
 import BrandTemplate from "@/components/templates/BrandTemplate";
 import Hero from "@/components/Hero";
 import React from "react";
@@ -15,6 +10,7 @@ import { ArrowOutward } from "@mui/icons-material";
 import Technologies from "@/components/Technologies";
 import Testimonials from "@/components/Testimonials";
 import Faqs from "@/components/Faqs";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -63,10 +59,15 @@ export default function page() {
                 />
               );
             })}
-            <Button variant="secondary" className="xl:hidden w-full">
-              i need a website
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
-          </Button>
+            <Link href="/contact">
+              <Button
+                variant="secondary"
+                className="xl:hidden md:hidden w-full"
+              >
+                i need a website
+                <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
+              </Button>
+            </Link>
           </article>
         </div>
       </section>
@@ -108,28 +109,29 @@ export default function page() {
                 <DesignProjectsTemplate key={index} image={image} name={name} />
               );
             })}
-            
           </article>
-          <Button variant="third" className="xl:hidden w-full mt-8">
+          <Link href="/contact">
+            <Button variant="third" className="xl:hidden w-full md:hidden mt-8">
               i need a design
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
-          </Button>
+              <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* TEchnologies used */}
       <section>
-        <Technologies/>
+        <Technologies />
       </section>
 
       {/* Testimonials */}
       <section>
-        <Testimonials/>
+        <Testimonials />
       </section>
 
       {/* FAQs */}
       <section>
-        <Faqs/>
+        <Faqs />
       </section>
     </main>
   );

@@ -51,7 +51,7 @@ export default function Testimonials() {
                   <Avatar>
                     <Image src={item.avatar} alt="avatar" />
                   </Avatar>
-                  <div className="flex flex-col text-colorDark">
+                  <div className="flex flex-col text-colorDark leading-5">
                     <span className="font-semibold capitalize">
                       {item.name}
                     </span>

@@ -191,7 +191,6 @@ export const aboutUs = [
   },
 ];
 
-
 export const plans = [
   {
     title: "design",
@@ -227,5 +226,27 @@ export const plans = [
       { feature: "logo redesign", price: "10,000" },
       { feature: "business card", price: "5,000" },
     ],
+  },
+];
+export const ourProcess = [
+  {
+    id: 1,
+    name: "Research & Discovery:",
+    desc: "We start by understanding your brand, goals, and audience.",
+  },
+  {
+    id: 2,
+    name: "Wireframes:",
+    desc: "Our creative team brings your vision to life with innovative sketches and prototypes.",
+  },
+  {
+    id: 3,
+    name: "Design & Prototyping:",
+    desc: "Our creative team brings your vision to life with innovative and engaging designs.",
+  },
+  {
+    id: 4,
+    name: "Development:",
+    desc: "Using the latest technologies and best practices, our developers build robust, scalable websites. We follow an agile methodology, allowing for flexibility and continuous improvement throughout the development process.",
   },
 ];
