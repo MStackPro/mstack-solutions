@@ -48,7 +48,7 @@ export default function page() {
             }
           )}
 
-          <article className="flex flex-wrap xl:grid xl:grid-cols-3 justify-between gap-8 md:grid md:grid-cols-2 w-full mt-4">
+          <article className="grid grid-cols-1 xl:grid-cols-3 justify-between gap-8 md:grid-cols-2 w-full mt-4">
             {webProjects.map(({ image, name, link, index }) => {
               return (
                 <WebProjectsTemplates
@@ -62,7 +62,7 @@ export default function page() {
             <Link href="/contact">
               <Button
                 variant="secondary"
-                className="xl:hidden md:hidden w-full"
+                className="xl:hidden w-full md:hidden"
               >
                 i need a website
                 <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />

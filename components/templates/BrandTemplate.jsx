@@ -66,9 +66,8 @@ export default function BrandTemplate({
       </article>
       <Link
         href="https://www.behance.net/walshakmanasseh"
-         className="xl:hidden w-full md:hidden"
       >
-        <Button>
+        <Button className="xl:hidden w-full md:hidden">
           {cta1}{" "}
           <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
         </Button>
