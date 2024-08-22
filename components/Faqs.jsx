@@ -12,7 +12,7 @@ import React from "react";
 
 export default function Faqs() {
   return (
-    <main className='container mt-20'>
+    <main className='container mt-28'>
         <section className='flex flex-col gap-16 items-center justify-center'>
             <h2 className='text-2xl font-semibold capitalize text-colorGray'>frequently asked questions</h2>
             <article className='grid xl:grid-cols-2 grid-cols-1 gap-8'>

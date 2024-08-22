@@ -4,35 +4,38 @@ import { List } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Logo from "/assets/mstack.png";
+import Logo from "/public/mstackWhite.svg";
 import { usePathname } from "next/navigation";
-import MobileNav from '/components/MobileNav'
+import MobileNav from "/components/MobileNav";
 import { navlinks } from "@/assets/Data";
 import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "./ui/button";
 
-
-
 export default function Navbar() {
-
-  const [navbarBg, setnavbarBg] = useState(false)
+  const [navbarBg, setnavbarBg] = useState(false);
 
   const navbarBgChange = () => {
-      if (window.scrollY >= 80) {
-        setnavbarBg(true)
-      } else {
-        setnavbarBg(false)
-      }
-  }
+    if (window.scrollY >= 80) {
+      setnavbarBg(true);
+    } else {
+      setnavbarBg(false);
+    }
+  };
 
-  useEffect (() => {
-    navbarBgChange()
-    window.addEventListener('scroll', navbarBgChange)
-  })
+  useEffect(() => {
+    navbarBgChange();
+    window.addEventListener("scroll", navbarBgChange);
+  });
 
   const pathname = usePathname();
   return (
-    <nav className={`${navbarBg ? 'bg-colorDark shadow-md transition duration-500ms ease-in-out' : 'bg-transparent'} h-20 mt-[1.65rem] flex items-center fixed w-screen z-40`}>
+    <nav
+      className={`${
+        navbarBg
+          ? "bg-colorDark shadow-md transition duration-500ms ease-in-out"
+          : "bg-transparent"
+      } top-0 h-20 mt-[1.65rem] flex items-center fixed w-screen z-40`}
+    >
       <div className="container flex items-center justify-between">
         <Link href="/">
           <Image src={Logo} alt="logo" width={170} priority />
@@ -54,17 +57,15 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Button
-            href="/contact"
-          >
-            Contact
-          </Button>
+          <Link href="/contact">
+            <Button>Contact</Button>
+          </Link>
         </List>
 
         {/* mobile nav */}
-      <div className="xl:hidden">
-      <MobileNav/>
-      </div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </nav>
   );

@@ -1,26 +1,28 @@
 import { plans } from "@/assets/Data";
+import SectionHero from "@/components/SectionHero";
 import { Button } from "@/components/ui/button";
 import { ArrowOutward } from "@mui/icons-material";
+import HeroImage from '/assets/pricesHero.jpg'
 import Link from "next/link";
 import React from "react";
 
+
+
 export default function Pricing() {
   return (
-    <main className="flex items-center justify-center">
-      <section className="container text-colorGray mt-36 mb-10 flex flex-col space-y-10 items-center">
-        <div className="flex flex-col items-center text-center gap-4">
-          <h2 className="text-4xl font-semibold">Prices</h2>
-          <p className="text-textGray xl:w-3/4 leading-6">
-            Choose a package that suits your need and budget. Transparent
-            pricing with no hidden fees.
-          </p>
-        </div>
+    <main>
+      <SectionHero title='prices' image={HeroImage}>
+      Choose a package that suits your need and budget. Transparent
+      pricing with no hidden fees.
+      </SectionHero>
+      <section className="container text-colorGray mt-20 mb-10 flex flex-col space-y-10 items-center">
+
         <article className="grid xl:grid-cols-3 grid-cols-1 md:grid-cols-2 place-items-center gap-6">
           {plans.map((item, id) => {
             return (
               <article
                 key={id}
-                className="flex flex-1 p-4 flex-col items-center gap-2 w-[20rem] rounded-md border border-colorGray"
+                className="flex flex-1 p-4 flex-col items-center gap-2 w-[20rem] rounded-md border border-colorGray hover:border-primary transition-all duration-500 ease-in-out"
               >
                 <h3 className="uppercase font-semibold">{item.title}</h3>
                 <p className="text-textGray text-3xl">&#8358; {item.price}</p>

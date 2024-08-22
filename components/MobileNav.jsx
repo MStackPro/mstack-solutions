@@ -12,7 +12,7 @@ import { IconButton } from "@mui/material";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "./ui/button";
-
+import Link from "next/link";
 
 export default function SwipeableTemporaryDrawer() {
   const pathname = usePathname();
@@ -41,7 +41,7 @@ export default function SwipeableTemporaryDrawer() {
       <IconButton onClick={toggleDrawer(false)} className="mr-40 mt-12">
         <CloseOutlinedIcon fontSize="large" />
       </IconButton>
-      
+
       <List>
         {navlinks.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -50,17 +50,15 @@ export default function SwipeableTemporaryDrawer() {
                 primary={item.name}
                 className={`${
                   item.path == pathname &&
-                  "text-primary border-b border-primary transition-all ease-in-out"
-                } capitalize font-semibold transition-all ease-in-out hover:text-primary`}
+                  "text-primary transition-all duration-500 ease-in-out"
+                } capitalize transition-all ease-in-out hover:text-primary `}
               />
             </ListItemButton>
           </ListItem>
         ))}
-        <Button
-            href="/contact"
-          >
-            Contact
-          </Button>
+        <Link href="/contact">
+          <Button>Contact</Button>
+        </Link>
       </List>
     </Box>
   );
@@ -76,7 +74,7 @@ export default function SwipeableTemporaryDrawer() {
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
-        PaperProps={{style: {backgroundColor: "#f1f1f1"}}}
+        PaperProps={{ style: { backgroundColor: "#f1f1f1" } }}
       >
         {drawerList()}
       </SwipeableDrawer>

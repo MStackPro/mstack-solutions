@@ -1,10 +1,10 @@
+import Loading from '@/components/Loader'
 import React from 'react'
 
-export default function Loading() {
+export default function loading() {
   return (
-    <main className='text-center'>
-        <h2 className='text-primary'>Loading...</h2>
-        <p>Hopefully not for too long :)</p>
+    <main>
+      <Loading/>
     </main>
   )
 }

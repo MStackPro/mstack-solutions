@@ -1,8 +1,10 @@
 import { IoIosEye } from "react-icons/io";
 import { IoDiamondOutline } from "react-icons/io5";
-import { GoDotFill } from "react-icons/go";
-import { TbCurrencyNaira } from "react-icons/tb";
-
+import { MdEdit, MdWeb } from "react-icons/md";
+import { FaLaptopCode, FaSearch } from "react-icons/fa";
+import { FiPenTool } from "react-icons/fi";
+import { GiPaintBucket } from "react-icons/gi";
+import { ImFire } from "react-icons/im";
 
 export const navlinks = [
   { name: "Home", path: "/" },
@@ -12,7 +14,11 @@ export const navlinks = [
 ];
 
 export const webProjects = [
-  { image: require("/assets/landing-page.png"), name: "mstack solutions", link: "#" },
+  {
+    image: require("/assets/landing-page.png"),
+    name: "mstack solutions",
+    link: "#",
+  },
   { image: require("/assets/NFT.png"), name: "nft", link: "#" },
   {
     image: require("/assets/CreativeAgency.png"),
@@ -67,21 +73,39 @@ export const aboutWebDev = [
 export const services = [
   {
     id: 1,
-    name: "design",
+    icon: <MdWeb />,
+    name: "web design",
     desc: "We take up all of your brand design needs from scratch to finish, starting from Your logo up to your Website Design.",
-    link: "#",
   },
   {
     id: 2,
-    name: "development",
+    icon: <FaLaptopCode />,
+    name: "web development",
     desc: "We also focus on understanding your brand and the customer base it is targeting, then develop uniform concepts that attract your customers the most.",
-    link: "#",
   },
   {
     id: 3,
+    icon: <FiPenTool />,
+    name: "graphic design",
+    desc: "For brands with already existing design concepts, but want to step it up, We provide core research for your brand to fix all issues that make it unstable.",
+  },
+  {
+    id: 3,
+    icon: <GiPaintBucket />,
+    name: "branding",
+    desc: "For brands with already existing design concepts, but want to step it up, We provide core research for your brand to fix all issues that make it unstable.",
+  },
+  {
+    id: 3,
+    icon: <FaSearch />,
+    name: "seo & content",
+    desc: "For brands with already existing design concepts, but want to step it up, We provide core research for your brand to fix all issues that make it unstable.",
+  },
+  {
+    id: 3,
+    icon: <MdEdit />,
     name: "modification",
     desc: "For brands with already existing design concepts, but want to step it up, We provide core research for your brand to fix all issues that make it unstable.",
-    link: "#",
   },
 ];
 
@@ -114,7 +138,7 @@ export const testimonies = [
     id: 1,
     name: "Kasha",
     quote:
-      "Amazingly talented Brand design. I really admire the work! I recomended them to my friends too. I Will 100 percent recommended them for website and brand identity design projects.",
+      "Amazingly talented Brand design. I really admire the work! I recomended them to my friends too. I Will 100 percent recommend them for website and brand identity design projects.",
     job: "ceo kve africa",
     avatar: require("/assets/tm1.jpg"),
   },
@@ -161,17 +185,12 @@ export const aboutUs = [
     desc: "To be a global leader in technology solutions with web apps, websites, brand identity designs in 2030, setting the benchmark for excellence, reliabilty, and transformative impact. We envision a world where Mstack Solutions innovations catalyze positive change, making businesses more agile, connected and more profitable.",
   },
   {
-    icon: <IoIosEye />,
-    title: "our vision",
-    desc: [
-      { icon: <GoDotFill />, name: "intergrity" },
-      { icon: <GoDotFill />, name: "dedication" },
-      { icon: <GoDotFill />, name: "quality" },
-      { icon: <GoDotFill />, name: "team work" },
-      { icon: <GoDotFill />, name: "uniqueness" },
-    ],
+    icon: <ImFire />,
+    title: "our values",
+    desc: ["intergrity", "dedication", "quality", "team work", "uniqueness"],
   },
 ];
+
 
 export const plans = [
   {
