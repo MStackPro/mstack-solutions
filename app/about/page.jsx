@@ -1,3 +1,5 @@
+"use client";
+
 import { aboutUs, ourProcess } from "@/assets/Data";
 import SectionHero from "@/components/SectionHero";
 import Image from "next/image";
@@ -8,6 +10,8 @@ import AboutImage2 from "/assets/about2.jpg";
 import AboutImage1 from "/assets/about1.JPG";
 import { BiSliderAlt } from "react-icons/bi";
 import { MdGroups } from "react-icons/md";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/components/motions/variants";
 
 export default function About() {
   return (
@@ -16,7 +20,13 @@ export default function About() {
         Our journey of innovation and excellence
       </SectionHero>
       <section className="container mt-20 flex flex-col space-y-20">
-        <article className="grid xl:grid-cols-2 xl:gap-40 md:gap-10 md:grid-cols-1 grid-cols-1 gap-8">
+        <motion.article
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="grid xl:grid-cols-2 xl:gap-40 md:gap-10 md:grid-cols-1 grid-cols-1 gap-8"
+        >
           <div className="flex flex-col gap-6">
             <h3 className="text-2xl font-semibold capitalize text-colorGray">
               get to know us
@@ -37,13 +47,19 @@ export default function About() {
           <div>
             <Image src={AboutImage1} alt="about" className="rounded-md" />
           </div>
-        </article>
+        </motion.article>
 
-        <article className="grid xl:grid-cols-3 xl:gap-12 md:grid-cols-2 gap-4">
+        <motion.article
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="grid xl:grid-cols-3 xl:gap-12 md:grid-cols-2 gap-4"
+        >
           {aboutUs.map((item, index) => (
             <div
               key={index}
-              className=" flex-1 flex flex-col gap-4 items-center text-center rounded-md text-textGray bg-colorGray p-4"
+              className=" flex-1 flex flex-col gap-4 items-center text-center rounded-md text-colorDark bg-colorGray p-4"
             >
               <div className="text-4xl">{item.icon}</div>
               <h3 className="text-2xl capitalize font-semibold">
@@ -63,9 +79,15 @@ export default function About() {
               )}
             </div>
           ))}
-        </article>
+        </motion.article>
 
-        <div className="flex xl:flex-row flex-col gap-8">
+        <motion.div
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="flex xl:flex-row flex-col gap-8"
+        >
           <div className="flex flex-col gap-4 text-colorGray">
             <div className="bg-primary w-fit py-1 px-2 rounded-full">
               Why Choose us
@@ -87,7 +109,7 @@ export default function About() {
                 dedicated to shaping cutting-edge solutions for your sucess.
               </p>
             </article>
-            <article className="flex flex-col gap-4 bg-colorGray rounded-md p-4 text-colorDark">
+            <article className="flex flex-col gap-4 bg-colorGray text-colorDark rounded-md p-4">
               <div className="flex gap-6 items-center">
                 <BiSliderAlt className="text-2xl" />
                 <h3 className="font-semibold ">Personalization</h3>
@@ -99,9 +121,15 @@ export default function About() {
               </p>
             </article>
           </div>
-        </div>
+        </motion.div>
 
-        <article className="grid xl:grid-cols-2 xl:gap-40 md:gap-10 md:grid-cols-1 grid-cols-1 gap-8">
+        <motion.article
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="grid xl:grid-cols-2 xl:gap-40 md:gap-10 md:grid-cols-1 grid-cols-1 gap-8"
+        >
           <div className="flex flex-col items-start gap-6 xl:w-[30rem] w-fit">
             <h3 className="text-2xl font-semibold capitalize text-colorGray">
               our process
@@ -126,7 +154,7 @@ export default function About() {
           <div>
             <Image src={AboutImage2} alt="about" className="rounded-md" />
           </div>
-        </article>
+        </motion.article>
       </section>
     </main>
   );

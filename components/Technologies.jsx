@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Css from "../public/css3.svg";
@@ -15,27 +17,37 @@ import Vuejs from "../public/vue-js-icon.svg";
 import Marquee from "react-fast-marquee";
 import Photoshop from "../public/adobe-photoshop-icon.svg";
 import Illustrator from "../public/adobe-illustrator-icon.svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "./motions/variants";
 
 export default function Technologies() {
   return (
     <main className="flex items-center flex-col gap-10 justify-center mt-10">
-      <h2 className="text-2xl font-semibold capitalize text-colorGray">Technologies used</h2>
+      <motion.div
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="text-2xl font-semibold capitalize text-colorGray"
+      >
+        Technologies used
+      </motion.div>
       <section className="overflow-x-hidden relative w-full">
         <Marquee>
-          <Image src={Css} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Figma} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Html} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Javascript} alt="css" width={50} height={40} priority className="mr-20"/>
-          <Image src={Nodejs} alt="css" width={60} height={40} priority className="mr-20"/>
-          <Image src={Python} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Wordpress} alt="css" width={70} height={40} priority className="mr-20"/>
-          <Image src={ReactLogo} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={MongoDB} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Mysql} alt="css" width={70} height={40} priority className="mr-20"/>
-          <Image src={NextJS} alt="css" width={60} height={40} priority className="mr-20"/>
-          <Image src={Vuejs} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Photoshop} alt="css" width={40} height={40} priority className="mr-20"/>
-          <Image src={Illustrator} alt="css" width={40} height={40} priority className="mr-20"/>
+          <Image src={Css} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Figma} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Html} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Javascript} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Nodejs} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Python} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Wordpress} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={ReactLogo} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={MongoDB} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Mysql} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={NextJS} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Vuejs} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Photoshop} alt="css" className="mr-20 xl:w-20 w-16" />
+          <Image src={Illustrator} alt="css" className="mr-20 xl:w-20 w-16" />
         </Marquee>
       </section>
     </main>

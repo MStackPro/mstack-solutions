@@ -8,14 +8,22 @@ import "swiper/css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
+import { fadeIn } from "./motions/variants";
 
 export default function Testimonials() {
   return (
     <main className="mt-16">
       <section className="flex flex-col gap-12 items-center justify-center">
-        <h3 className="text-2xl w-[20rem] text-colorGray text-center font-semibold capitalize">
+        <motion.h3
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.7 }}
+          className="text-2xl w-[20rem] text-colorGray text-center font-semibold capitalize"
+        >
           more than 10+ satisfied clients testimonies
-        </h3>
+        </motion.h3>
         <Swiper
           modules={[Autoplay]}
           spaceBetween={100}

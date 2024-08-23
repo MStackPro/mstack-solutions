@@ -1,16 +1,10 @@
-import { aboutDesigns, aboutWebDev, designs, webProjects } from "@/assets/Data";
-import BrandTemplate from "@/components/templates/BrandTemplate";
 import Hero from "@/components/Hero";
 import React from "react";
-import WebProjectsTemplates from "@/components/templates/WebProjectsTemplates";
-import DesignTemplate from "@/components/templates/DesignTemplate";
-import DesignProjectsTemplate from "@/components/templates/DesignProjectsTemplate";
-import { Button } from "@/components/ui/button";
-import { ArrowOutward } from "@mui/icons-material";
 import Technologies from "@/components/Technologies";
 import Testimonials from "@/components/Testimonials";
 import Faqs from "@/components/Faqs";
-import Link from "next/link";
+import AboutWeb from "@/components/AboutWeb";
+import AboutDesign from "@/components/AboutDesign";
 
 export default function page() {
   return (
@@ -18,106 +12,10 @@ export default function page() {
       <Hero />
 
       {/* about web devlopment */}
-      <section className="py-10">
-        <div className="container">
-          {aboutWebDev.map(
-            ({
-              index,
-              heading,
-              desc,
-              cta1,
-              cta2,
-              experience,
-              projects,
-              team,
-              web,
-            }) => {
-              return (
-                <BrandTemplate
-                  key={index}
-                  heading={heading}
-                  desc={desc}
-                  cta1={cta1}
-                  cta2={cta2}
-                  experience={experience}
-                  projects={projects}
-                  team={team}
-                  web={web}
-                />
-              );
-            }
-          )}
-
-          <article className="grid grid-cols-1 xl:grid-cols-3 justify-between gap-8 md:grid-cols-2 w-full mt-4">
-            {webProjects.map(({ image, name, link, index }) => {
-              return (
-                <WebProjectsTemplates
-                  key={index}
-                  image={image}
-                  name={name}
-                  link={link}
-                />
-              );
-            })}
-            <Link href="/contact">
-              <Button
-                variant="secondary"
-                className="xl:hidden w-full md:hidden"
-              >
-                i need a website
-                <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
-              </Button>
-            </Link>
-          </article>
-        </div>
-      </section>
+      <AboutWeb />
 
       {/* about designs */}
-      <section className="bg-colorGray py-10">
-        <div className="container">
-          {aboutDesigns.map(
-            ({
-              index,
-              heading,
-              desc,
-              cta1,
-              cta2,
-              experience,
-              projects,
-              team,
-              logo,
-            }) => {
-              return (
-                <DesignTemplate
-                  key={index}
-                  heading={heading}
-                  desc={desc}
-                  cta1={cta1}
-                  cta2={cta2}
-                  experience={experience}
-                  projects={projects}
-                  team={team}
-                  logo={logo}
-                />
-              );
-            }
-          )}
-
-          <article className="grid grid-cols-2 xl:grid xl:grid-cols-4 gap-8 md:grid md:grid-cols-3 w-full mt-4">
-            {designs.map(({ image, name, index }) => {
-              return (
-                <DesignProjectsTemplate key={index} image={image} name={name} />
-              );
-            })}
-          </article>
-          <Link href="/contact">
-            <Button variant="third" className="xl:hidden w-full md:hidden mt-8">
-              i need a design
-              <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <AboutDesign />
 
       {/* TEchnologies used */}
       <section>

@@ -5,7 +5,7 @@ export default function SectionHero({ title, image, children }) {
   return (
     <header className="z-50 mt-[1.6rem] h-[15rem] xl:h-[23rem] md:h-[15rem] overflow-hidden border-b-2 border-textGray">
       <div className="w-full h-full relative grid place-items-center">
-        <div className="absolute w-full bg-colorDark opacity-30">
+        <div className="absolute w-full bg-colorDark opacity-20">
           <Image src={image} alt="hero background image" />
         </div>
         <div className="relative xl:w-[44%] mt-8 xl:p-0 mx-auto text-center text-colorGray">

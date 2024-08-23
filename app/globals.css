@@ -13,3 +13,6 @@
     @apply bg-colorDark text-colorGray leading-loose;
   }
 }
+.cll {
+  color: #3c3c3c;
+}
