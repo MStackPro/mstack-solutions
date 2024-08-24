@@ -19,6 +19,7 @@ export default function About() {
       <SectionHero title="about us" image={AboutHero}>
         Our journey of innovation and excellence
       </SectionHero>
+
       <section className="container mt-20 flex flex-col space-y-20">
         <motion.article
           variants={fadeIn("up", 0.1)}
@@ -59,7 +60,7 @@ export default function About() {
           {aboutUs.map((item, index) => (
             <div
               key={index}
-              className=" flex-1 flex flex-col gap-4 items-center text-center rounded-md text-colorDark bg-colorGray p-4"
+              className=" flex-1 flex flex-col gap-4 items-center text-center rounded-md text-colorDark bg-cardBg p-4"
             >
               <div className="text-4xl">{item.icon}</div>
               <h3 className="text-2xl capitalize font-semibold">
@@ -99,7 +100,7 @@ export default function About() {
           </div>
 
           <div className="flex xl:flex-row flex-col md:flex-row gap-8">
-            <article className="flex flex-col gap-4 bg-colorGray rounded-md p-4 text-colorDark">
+            <article className="flex flex-col gap-4 bg-cardBg rounded-md p-4 text-colorDark">
               <div className="flex gap-6 items-center">
                 <MdGroups className="text-2xl" />
                 <h3 className="font-semibold ">Team of Experts</h3>
@@ -109,7 +110,7 @@ export default function About() {
                 dedicated to shaping cutting-edge solutions for your sucess.
               </p>
             </article>
-            <article className="flex flex-col gap-4 bg-colorGray text-colorDark rounded-md p-4">
+            <article className="flex flex-col gap-4 bg-cardBg text-colorDark rounded-md p-4">
               <div className="flex gap-6 items-center">
                 <BiSliderAlt className="text-2xl" />
                 <h3 className="font-semibold ">Personalization</h3>
@@ -142,10 +143,10 @@ export default function About() {
                     key={id}
                     className="flex justify-center items-start text-textGray"
                   >
-                    <p>
+                    <ul className="container">
                       {" "}
-                      <strong>{item.name}</strong> {item.desc}
-                    </p>
+                      <li className="list-disc"><strong>{item.name}</strong> {item.desc}</li>
+                    </ul>
                   </div>
                 );
               })}

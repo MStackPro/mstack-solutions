@@ -32,14 +32,14 @@ const socials = [
 ];
 
 const supportLinks = [
-  { id: 1, name: "Privacy policy", link: "#" },
-  { id: 1, name: "Terms of service", link: "#" },
+  { id: 1, name: "Privacy policy", link: "/privacy" },
+  { id: 1, name: "Terms of service", link: "/terms" },
 ];
 
 export default function Footer() {
   const pathname = usePathname();
   return (
-    <main className="bg-colorGray mt-28">
+    <main className="bg-cardBg mt-28">
       <motion.section
         variants={fadeIn("up", 0.2)}
         initial="hidden"

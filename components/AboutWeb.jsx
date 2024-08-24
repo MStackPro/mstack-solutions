@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ArrowOutward } from "@mui/icons-material";
 import React from "react";
@@ -8,7 +8,6 @@ import { aboutWebDev, webProjects } from "@/assets/Data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "./motions/variants";
-
 
 export default function AboutWeb() {
   return (
@@ -20,13 +19,13 @@ export default function AboutWeb() {
               key={id}
               className="flex flex-col xl:flex-row md:flex-row justify-between py-10 gap-8"
             >
-              <motion.div 
+              <motion.div
                 variants={fadeIn("up", 0.1)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
-
-                className="flex xl:flex-1 md:flex-1 flex-col items-start gap-6">
+                viewport={{ once: false, amount: 0.7 }}
+                className="flex xl:flex-1 md:flex-1 flex-col items-start gap-6"
+              >
                 <h2 className="xl:text-4xl text-3xl font-semibold capitalize text-colorGray xl:w-2/3">
                   {item.heading}
                 </h2>
@@ -49,12 +48,12 @@ export default function AboutWeb() {
               </motion.div>
 
               <motion.div
-               variants={fadeIn("up", 0.1)}
-               initial="hidden"
-               whileInView={"show"}
-               viewport={{once: false, amount: 0.7}}
-
-               className="flex xl:justify-end md:justify-end gap-20 xl:flex-1 md:flex-1">
+                variants={fadeIn("up", 0.1)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+                className="flex xl:justify-end md:justify-end gap-20 xl:flex-1 md:flex-1"
+              >
                 <div className="flex flex-col xl:items-end md:items-end md:text-end xl:text-end gap-12">
                   <div>
                     <h4 className="uppercase text-textGray">experience</h4>
@@ -90,30 +89,30 @@ export default function AboutWeb() {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
-                >
-              <Link href="https://www.behance.net/walshakmanasseh">
-                <Button className="xl:hidden w-full md:hidden">
-                  {item.cta1}{" "}
-                  <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
-                </Button>
-              </Link>
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <Link href="https://www.behance.net/walshakmanasseh">
+                  <Button className="xl:hidden w-full md:hidden">
+                    {item.cta1}{" "}
+                    <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
+                  </Button>
+                </Link>
               </motion.div>
             </div>
           );
         })}
       </section>
 
-          {/* WEB PROJECTS */}
-          
+      {/* WEB PROJECTS */}
+
       <section className="container grid grid-cols-1 xl:grid-cols-3 justify-between gap-8 md:grid-cols-2 w-full mt-4">
         {webProjects.map((item, id) => {
           return (
             <motion.div
-            variants={fadeIn("up", 0.3)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
+              variants={fadeIn("up", 0.3)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.7 }}
               key={id}
               className="border border-primary w-fit p-4 rounded-md"
             >
@@ -125,13 +124,7 @@ export default function AboutWeb() {
                     className="transition-transform duration-1000 hover:translate-y-[-100%] rounded-md"
                   />
                 </div>
-                <motion.div 
-                  variants={fadeIn("up", 0.2)}
-                  initial="hidden"
-                  whileInView={"show"}
-                  viewport={{once: false, amount: 0.7}}
-
-                  className="flex items-center justify-between">
+                <div className="flex items-center justify-between">
                   <p className="text-textGray uppercase">{item.name}</p>
                   <Link href={item.link}>
                     <Button variant="link">
@@ -139,23 +132,23 @@ export default function AboutWeb() {
                       <ArrowOutward className="ml-2 text-primary transform transition duration-500 group-hover:-translate-y-2" />
                     </Button>
                   </Link>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           );
         })}
-        <motion.div 
+        <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{once: false, amount: 0.7}}
-          >
-        <Link href="/contact">
-          <Button variant="secondary" className="xl:hidden w-full md:hidden">
-            i need a website
-            <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
-          </Button>
-        </Link>
+          viewport={{ once: false, amount: 0.7 }}
+        >
+          <Link href="/contact">
+            <Button variant="secondary" className="xl:hidden w-full md:hidden">
+              i need a website
+              <ArrowOutward className="ml-2 text-primary transform transition duration-500 hover:-translate-y-2" />
+            </Button>
+          </Link>
         </motion.div>
       </section>
     </main>

@@ -11,7 +11,7 @@ import { fadeIn } from "./motions/variants";
 
 export default function AboutDesign() {
   return (
-    <main className="bg-colorGray py-8">
+    <main className="bg-cardBg py-8">
       <section className="container">
         {aboutDesigns.map((item, id) => {
           return (
@@ -87,14 +87,16 @@ export default function AboutDesign() {
         })}
       </section>
 
-      <section className="container grid grid-cols-2 flex-col xl:grid xl:grid-cols-4 gap-8 md:grid md:grid-cols-3 w-full mt-4">
+      <motion.section
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="container grid grid-cols-2 flex-col xl:grid xl:grid-cols-4 gap-8 md:grid md:grid-cols-3 w-full mt-4"
+      >
         {designs.map((item, id) => {
           return (
-            <motion.div
-              variants={fadeIn("up", 0.2)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
+            <div
               key={id}
               className="border border-colorDark w-fit p-2 rounded-md"
             >
@@ -106,21 +108,16 @@ export default function AboutDesign() {
                     className="xl:w-[15rem] w-[13rem] md:w-[13rem] rounded-md"
                   />
                 </div>
-                <motion.div
-                  variants={fadeIn("up", 0.1)}
-                  initial="hidden"
-                  whileInView={"show"}
-                  viewport={{ once: false, amount: 0.7 }}
-                >
+                <div>
                   <p className="text-textGray xl:text-1xl text-sm uppercase">
                     {item.name}
                   </p>
-                </motion.div>
+                </div>
               </article>
-            </motion.div>
+            </div>
           );
         })}
-      </section>
+      </motion.section>
       <motion.div
         variants={fadeIn("up", 0.2)}
         initial="hidden"

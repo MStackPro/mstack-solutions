@@ -16,15 +16,17 @@ export default function Pricing() {
         Choose a package that suits your need and budget. Transparent pricing
         with no hidden fees.
       </SectionHero>
-      <section className="container text-colorGray mt-20 mb-10 flex flex-col space-y-10 items-center">
+      <motion.section
+        variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="container text-colorGray mt-20 mb-10 flex flex-col space-y-10 items-center"
+      >
         <article className="grid xl:grid-cols-3 grid-cols-1 md:grid-cols-2 place-items-center gap-6">
           {plans.map((item, id) => {
             return (
-              <motion.article
-                variants={fadeIn("up", 0.1)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
+              <article
                 key={id}
                 className="flex flex-1 p-4 flex-col items-center gap-2 w-[20rem] rounded-md border border-colorGray hover:border-primary transition-all duration-500 ease-in-out"
               >
@@ -53,11 +55,11 @@ export default function Pricing() {
                     <ArrowOutward className="ml-2 text-colorGray transform transition duration-500 group-hover:-translate-y-2" />
                   </Button>
                 </Link>
-              </motion.article>
+              </article>
             );
           })}
         </article>
-      </section>
+      </motion.section>
     </main>
   );
 }

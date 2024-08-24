@@ -51,7 +51,7 @@ export default function Testimonials() {
             return (
               <SwiperSlide
                 key={id}
-                className="flex flex-col items-start space-y-4 xl:px-6 px-4 py-2 xl:w-[400px] w-[250px] rounded-md border border-primary transition duration-500 ease-in-out bg-colorGray cursor-pointer"
+                className="flex flex-col items-start space-y-4 xl:px-6 px-4 py-2 xl:w-[400px] w-[250px] rounded-md border border-primary transition duration-500 ease-in-out bg-cardBg cursor-pointer"
               >
                 <FaQuoteLeft className="text-primary text-2xl" />
                 <p className="leading-5 text-sm text-colorDark">{item.quote}</p>

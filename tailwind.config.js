@@ -19,6 +19,7 @@ module.exports = {
         colorDark: "#1e1e1e",
         colorGray: "#f1f1f1",
         textGray: "#929292",
+        cardBg: "#e4e4e9",
       },
       screens: {
         sm: "640px",
