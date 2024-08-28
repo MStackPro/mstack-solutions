@@ -32,7 +32,7 @@ export default function Navbar() {
     <nav
       className={`${
         navbarBg
-          ? "bg-colorDark shadow-md transition duration-500ms ease-in-out"
+          ? "bg-colorDark bg-opacity-95 border-b border-textGray shadow-md transition duration-500ms ease-in-out"
           : "bg-transparent"
       } top-0 h-20 mt-[1.65rem] flex items-center fixed w-screen z-40`}
     >
@@ -50,7 +50,7 @@ export default function Navbar() {
                 className={`${
                   item.path == pathname &&
                   "text-primary border-b border-primary transition-all ease-in-out"
-                } capitalize transition-all ease-in-out font-semibold hover:text-primary`}
+                } capitalize transition-all ease-in-out hover:text-primary`}
               >
                 {item.name}
                 {/* {item.name === "Services" && (<IoIosArrowDown className="ml-1"/>)} */}

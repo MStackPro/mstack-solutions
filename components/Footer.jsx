@@ -47,7 +47,7 @@ export default function Footer() {
         viewport={{ once: false, amount: 0.7 }}
         className="container"
       >
-        <footer className="py-16 text-colorDark flex xl:flex-row flex-col md:flex-row md:items-start items-center xl:items-start justify-center gap-12  xl:justify-between md:justify-between">
+        <footer className="py-16 text-colorDark flex xl:flex-row flex-col md:flex-row md:items-start xl:items-start justify-center gap-12  xl:justify-between md:justify-between">
           <article className="flex flex-col items-center gap-8">
             <Link href="/">
               <Image src={Logo} alt="logo" priority width={200} />
@@ -67,52 +67,54 @@ export default function Footer() {
             </div>
           </article>
 
-          <article className="flex flex-col items-start gap-4">
-            <h3 className="xl:text-2xl font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
-              useful links
-            </h3>
-            <div className="flex flex-col gap-4 transition-all duration-500 ease-out">
-              {navlinks.map((item) => {
-                return (
-                  <Link
-                    key={item.name}
-                    href={item.path}
-                    className={`${
-                      item.path == pathname &&
-                      "text-primary transition-all ease-in-out"
-                    } capitalize transition-all ease-in-out hover:text-primary`}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-            </div>
-          </article>
+          <div className="flex justify-center gap-20 xl:gap-40">
+            <article className="flex flex-col items-start gap-4">
+              <h3 className="xl:text-2xl text-[15px] font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
+                useful links
+              </h3>
+              <div className="flex flex-col gap-4 transition-all duration-500 ease-out text-sm xl:text-[16px]">
+                {navlinks.map((item) => {
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.path}
+                      className={`${
+                        item.path == pathname &&
+                        "text-primary transition-all ease-in-out"
+                      } capitalize transition-all ease-in-out hover:text-primary`}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </article>
 
-          <article className="flex flex-col items-start gap-4 ">
-            <h3 className="xl:text-2xl font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
-              support
-            </h3>
-            <div className="flex flex-col gap-4 text-start transition-all duration-500 ease-out">
-              {supportLinks.map((item, id) => {
-                return (
-                  <Link
-                    key={id}
-                    href={item.link}
-                    className={`${
-                      item.link == pathname &&
-                      "text-primary transition-all ease-in-out"
-                    } transition-all ease-in-out hover:text-primary `}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-            </div>
-          </article>
+            <article className="flex flex-col items-start gap-4 ">
+              <h3 className="xl:text-2xl text-[15px] font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
+                legal
+              </h3>
+              <div className="flex flex-col gap-4 text-start transition-all duration-500 ease-out text-sm xl:text-[16px]">
+                {supportLinks.map((item, id) => {
+                  return (
+                    <Link
+                      key={id}
+                      href={item.link}
+                      className={`${
+                        item.link == pathname &&
+                        "text-primary transition-all ease-in-out"
+                      } transition-all ease-in-out hover:text-primary `}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            </article>
+          </div>
 
-          <article className="flex flex-col items-start gap-4">
-            <h3 className="xl:text-2xl font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
+          <article className="flex flex-col items-start xl:mx-0 mx-auto gap-4">
+            <h3 className="xl:text-2xl text-[15px] font-semibold capitalize inline-block border-b-2 pb-2 border-primary">
               get in touch
             </h3>
             <Link href="/contact">
@@ -122,7 +124,7 @@ export default function Footer() {
         </footer>
         <div className="py-2 flex flex-col md:flex-row xl:flex-row justify-between text-colorDark text-center border-t border-colorDark">
           <small>&copy; 2024 Mstack Solutions, All Rights Reserved</small>
-          <small>&copy; Designed by Mstack Solutions</small>
+          <small>Designed by Mstack Solutions</small>
         </div>
       </motion.section>
     </main>

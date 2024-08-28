@@ -105,14 +105,16 @@ export default function AboutWeb() {
 
       {/* WEB PROJECTS */}
 
-      <section className="container grid grid-cols-1 xl:grid-cols-3 justify-between gap-8 md:grid-cols-2 w-full mt-4">
+      <motion.section
+        variants={fadeIn("up", 0.3)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="container grid grid-cols-1 xl:grid-cols-3 justify-between gap-8 md:grid-cols-2 w-full mt-4"
+      >
         {webProjects.map((item, id) => {
           return (
-            <motion.div
-              variants={fadeIn("up", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
+            <div
               key={id}
               className="border border-primary w-fit p-4 rounded-md"
             >
@@ -134,7 +136,7 @@ export default function AboutWeb() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
         <motion.div
@@ -150,7 +152,7 @@ export default function AboutWeb() {
             </Button>
           </Link>
         </motion.div>
-      </section>
+      </motion.section>
     </main>
   );
 }

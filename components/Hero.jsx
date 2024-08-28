@@ -3,7 +3,9 @@
 import React from "react";
 import { ArrowOutward } from "@mui/icons-material";
 import { Button } from "./ui/button";
-import HeroBg from "/public/landing.png";
+import HeroBg from "/assets/Hero.png";
+import MDHeroBg from "/assets/MD-Hero.png";
+import SMHeroBg from "/assets/SM-Hero.png";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -16,7 +18,9 @@ export default function Hero() {
       className="h-screen relative overflow-hidden flex justify-center items-center mt-[1.6rem]"
     >
       <div className="absolute bg-colorDark opacity-35">
-        <Image src={HeroBg} alt="hero bg"/>
+        <Image src={HeroBg} alt="hero bg" className="hidden xl:block md:hidden"/>
+        <Image src={MDHeroBg} alt="hero bg" className="hidden md:block xl:hidden"/>
+        <Image src={SMHeroBg} alt="hero bg" className="xl:hidden md:hidden"/>
       </div>
       <div className="flex z-10 flex-col items-center text-center xl:space-y-8 space-y-6">
         <motion.div 
@@ -25,7 +29,7 @@ export default function Hero() {
           whileInView={"show"}
           viewport={{once: false, amount: 0.7}}
 
-          className="xl:text-6xl text-4xl font-semibold xl:w-1/2 w-full capitalize">
+          className="xl:text-6xl text-4xl font-semibold xl:w-1/2 md:w-2/3 w-full capitalize">
           We create <span className="text-primary">amazing</span> experiences
           for your brand.
         </motion.div>

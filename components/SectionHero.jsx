@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SectionHero({ title, image, children }) {
   return (
-    <header className="z-50 mt-[1.6rem] h-[15rem] xl:h-[23rem] md:h-[15rem] overflow-hidden border-b-2 border-textGray">
+    <header className="z-50 mt-[1.6rem] h-[15rem] xl:h-[23rem] md:h-[15rem] overflow-hidden border-b border-textGray">
       <div className="w-full h-full relative grid place-items-center">
         <div className="absolute w-full bg-colorDark opacity-20">
           <Image src={image} alt="hero background image" />
